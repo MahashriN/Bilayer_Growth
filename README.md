@@ -20,7 +20,7 @@ The numerical implementation is based on a finite element discretisation in one 
    - defines all model parameters and initial conditions,
    - assembles the finite element matrices,
    - evaluates reaction kinetics and inter-layer coupling,
-   - advances the coupled bilayer system in time,
+   - advances the coupled bilayer growing system in time,
    - and produces the numerical output used in the paper.
 
 ### Main functions used
@@ -29,7 +29,7 @@ The main script calls the following core routines:
 
  - `AssembleGlobalMatrices1D.m` - Assembles the global mass and stiffness matrices for the one-dimensional finite element discretisation.
  - `ReactKineInt1D.m` - Computes the nonlinear reaction kinetics in one dimension.
- - `SA2_1D2L_Diff_Iso.m` - Defines the coupled two-layer reaction–diffusion system with isotropic diffusion.
+ - `SA2_1D2L_Diff_Iso.m` - Sets up the frozen linear stability problem for the coupled bilayer recton-diffusion system and computes the corresponding dynamic dispersion relation.
 
 These routines rely on:
 
