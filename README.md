@@ -10,18 +10,15 @@ The numerical implementation is based on a finite element discretisation in one 
 
 ### How to run the code
 
-1. Run the main simulation
+Run the main simulation: `Main2_1D2L_Diff_Iso.m`
 
-   Execute
-   `Main2_1D2L_Diff_Iso.m`
+This script:
 
-   This script:
-
-   - defines all model parameters and initial conditions,
-   - assembles the finite element matrices,
-   - evaluates reaction kinetics and inter-layer coupling,
-   - advances the coupled bilayer growing system in time,
-   - and produces the numerical output used in the paper.
+ - defines all model parameters and initial conditions,
+ - assembles the finite element matrices,
+ - evaluates reaction kinetics and inter-layer coupling,
+ - advances the coupled bilayer growing system in time,
+ - and produces the numerical output used in the paper.
 
 ### Main functions used
 
