@@ -12,7 +12,7 @@ The numerical implementation is based on a finite element discretisation in one 
 
 1. Run the main simulation: `Main2_1D2L_Diff_Iso.m`
 
-  This script:
+   This script:
 
    - defines all model parameters and initial conditions,
    - assembles the finite element matrices,
