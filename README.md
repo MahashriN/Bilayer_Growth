@@ -10,15 +10,20 @@ The numerical implementation is based on a finite element discretisation in one 
 
 ### How to run the code
 
-Run the main simulation: `Main2_1D2L_Diff_Iso.m`
+1. Run the main simulation: `Main2_1D2L_Diff_Iso.m`
 
-This script:
+  This script:
 
- - defines all model parameters and initial conditions,
- - assembles the finite element matrices,
- - evaluates reaction kinetics and inter-layer coupling,
- - advances the coupled bilayer growing system in time,
- - and produces the numerical output used in the paper.
+   - defines all model parameters and initial conditions,
+   - assembles the finite element matrices,
+   - evaluates reaction kinetics and inter-layer coupling,
+   - advances the coupled bilayer growing system in time,
+   - and produces the numerical output used in the paper.
+
+2. Frozen stability analysis and dynamic dispersion relations: `SA2_1D2L_Diff_Iso.m`
+
+   This script sets up the frozen (quasi-static) linear stability problem for the coupled bilayer system and computes the corresponding dynamic dispersion rlations, which are used to analyse pattern-forming instabilities under growth.
+   
 
 ### Main functions used
 
@@ -26,7 +31,6 @@ The main script calls the following core routines:
 
  - `AssembleGlobalMatrices1D.m` - Assembles the global mass and stiffness matrices for the one-dimensional finite element discretisation.
  - `ReactKineInt1D.m` - Computes the nonlinear reaction kinetics in one dimension.
- - `SA2_1D2L_Diff_Iso.m` - Sets up the frozen linear stability problem for the coupled bilayer recton-diffusion system and computes the corresponding dynamic dispersion relation.
 
 These routines rely on:
 
