@@ -10,7 +10,9 @@ The numerical implementation is based on a finite element discretisation in one 
 
 ### How to run the code
 
-1. Run the main simulation: `Main2_1D2L_Diff_Iso.m`
+1. Run the main simulation
+
+   Execute `Main2_1D2L_Diff_Iso.m`
 
    This script:
 
@@ -20,7 +22,9 @@ The numerical implementation is based on a finite element discretisation in one 
    - advances the coupled bilayer growing system in time,
    - and produces the numerical output used in the paper.
 
-2. Frozen stability analysis and dynamic dispersion relations: `SA2_1D2L_Diff_Iso.m`
+3. Frozen stability analysis and dynamic dispersion relations
+
+   Run `SA2_1D2L_Diff_Iso.m`
 
    This script sets up the frozen (quasi-static) linear stability problem for the coupled bilayer system and computes the corresponding dynamic dispersion rlations, which are used to analyse pattern-forming instabilities under growth.
    
