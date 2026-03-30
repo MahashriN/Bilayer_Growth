@@ -2,7 +2,7 @@
 
 This repository contains MATLAB code used to generate numerical results for the paper
 
-*“Heterogeneous growth enables pattern formation in coupled bilayer reaction–diffusion systems.”*
+*“Differential isotropic growth as a symmetry-breaking mechanism for pattern formation in bilayer reaction-diffusion systems.”*
 
 The simulations study pattern formation in two coupled layers on a one-dimensional spatial domain, incorporating diffusion, nonlinear reaction kinetics, and growth-induced effects.
 
