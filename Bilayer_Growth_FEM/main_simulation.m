@@ -53,15 +53,14 @@ end
 gr1=round(gamma1,5); gr1=num2str(gr1);
 gr2=round(gamma2,5); gr2=num2str(gr2);
 
-eval=round(eta,4);
-eval=num2str(eval);
+etaStr=num2str(round(eta,4));
 
 runID = datestr(datetime('now'),'yyyymmdd_HHMMSS');
 
 prefix = sprintf('%s_%s_eta_%s_g1_%s_g2_%s',...
     runID,...
     growthName,...
-    eval,...
+    etaStr,...
     gr1,gr2);
 
 runPrefix = fullfile(folder,prefix);
@@ -130,7 +129,7 @@ fprintf(' Bilayer Growth RD Simulation\n');
 fprintf('=====================================\n');
 fprintf(' Kinetics : %s\n', kineticsName);
 fprintf(' Growth   : %s\n', growthName);
-fprintf(' eta      : %s\n', eval);
+fprintf(' eta      : %s\n', etaStr);
 fprintf(' gamma1   : %s\n', gr1);
 fprintf(' gamma2   : %s\n', gr2);
 fprintf(' u1_0      : %.4f\n', u1_0);
