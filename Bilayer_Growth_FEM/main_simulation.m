@@ -50,8 +50,8 @@ end
 
 %% Run information
 
-gr1=round(gamma1,5); gr1=num2str(gr1);
-gr2=round(gamma2,5); gr2=num2str(gr2);
+gr1=num2str(round(gamma1,5));
+gr2=num2str(round(gamma2,5));
 
 etaStr=num2str(round(eta,4));
 
