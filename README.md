@@ -1,52 +1,54 @@
 # Bilayer Growth
 
-This repository contains MATLAB code used to generate numerical results for the paper
+This repository contains MATLAB code used to simulate pattern formation in coupled reaction–diffusion systems on growing domains.
 
-*“Differential isotropic growth as a symmetry-breaking mechanism for pattern formation in bilayer reaction-diffusion systems.”*
+The code investigates pattern formation in two coupled reaction–diffusion layers on a one-dimensional growing domain. The model incorporates diffusion, nonlinear reaction kinetics, inter-layer coupling, and growth-induced dilution and geometric effects.
 
-The simulations study pattern formation in two coupled layers on a one-dimensional spatial domain, incorporating diffusion, nonlinear reaction kinetics, and growth-induced effects.
+The numerical implementation is based on a one-dimensional finite element discretisation coupled with an IMEX time-stepping scheme.
 
-The numerical implementation is based on a finite element discretisation in one spatial dimension.
+## How to run the code
 
-### How to run the code
+### Main simulation
 
-1. Run the main simulation
+Run
 
-   Execute `Main2_1D2L_Diff_Iso.m`
+`main_simulation.m`
 
-   This script:
+This script:
 
-   - defines all model parameters and initial conditions,
-   - assembles the finite element matrices,
-   - evaluates reaction kinetics and inter-layer coupling,
-   - advances the coupled bilayer growing system in time,
-   - and produces the numerical output used in the paper.
+* defines all model parameters and initial conditions,
+* assembles the finite element matrices,
+* evaluates reaction kinetics and inter-layer coupling,
+* advances the coupled bilayer system in time,
+* and generates the numerical solutions and figures.
 
-3. Frozen stability analysis and dynamic dispersion relations
+### Frozen-time stability analysis
 
-   Run `SA2_1D2L_Diff_Iso.m`
+Run
 
-   This script sets up the frozen (quasi-static) linear stability problem for the coupled bilayer system and computes the corresponding dynamic dispersion rlations, which are used to analyse pattern-forming instabilities under growth.
-   
+`SA2_1D2L_Diff_Iso.m`
 
-### Main functions used
+This script performs the frozen-time linear stability analysis of the coupled bilayer system and computes the corresponding dynamic dispersion relations used to investigate pattern-forming instabilities.
 
-The main script calls the following core routines:
+## Main functions
 
- - `AssembleGlobalMatrices1D.m` - Assembles the global mass and stiffness matrices for the one-dimensional finite element discretisation.
- - `ReactKineInt1D.m` - Computes the nonlinear reaction kinetics in one dimension.
+The main simulation relies on the following routines:
 
-These routines rely on:
+* `AssembleGlobalMatrices1D.m` – assembles the global mass and stiffness matrices.
+* `ReactKineInt1D.m` – evaluates the nonlinear reaction kinetics.
 
- - `basis_linear_1D.m` - Linear basis functions on the one-dimensional reference element.
- - `RefEdgeQuad.m` - Reference quadrature definitions used for numerical integration.
+These routines make use of:
 
-### Visualisation utilities
+* `basis_linear_1D.m` – linear basis functions on the reference element.
+* `RefEdgeQuad.m` – quadrature rules used for numerical integration.
 
- - `cmap_colorbar.m` - Custom colormap and colorbar utility for visualising spatiotemporal patterns.
- - `brownyellow.mat` - Stored colormap data used by the plotting routines.
+## Visualisation utilities
 
-### Notes
-- All parameters controlling diffusion, coupling, kinetics, and growth effects are defined inside the main script.
-- The code is written for clarity and reproducibility rather than computational optimisation.
-- This repository is intended to accompany the above paper and reproduce its numerical results.
+* `cmap_colorbar.m` – custom colormap and colorbar utility.
+* `brownyellow.mat` – stored colormap data used by the plotting routines.
+
+## Reproducibility
+
+All parameters controlling diffusion, reaction kinetics, inter-layer coupling, and domain growth are specified directly within the main scripts.
+
+The code is intended to reproduce the numerical experiments reported in the accompanying manuscript and is written with clarity and reproducibility in mind.
