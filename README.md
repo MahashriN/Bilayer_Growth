@@ -26,7 +26,7 @@ This script:
 
 Run
 
-`SA2_1D2L_Diff_Iso.m`
+`frozen_time_stability_analysis.m`
 
 This script performs the frozen-time linear stability analysis of the coupled bilayer system and computes the corresponding dynamic dispersion relations used to investigate pattern-forming instabilities.
 
